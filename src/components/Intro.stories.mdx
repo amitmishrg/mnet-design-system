@@ -1,0 +1,41 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import designSystem from './mnetb.svg';
+
+<Meta title="Design System/Intro" />
+
+<img
+  src={designSystem}
+  style={{ margin: '0 auto 50px auto', height: '80px', display: 'block' }}
+/>
+
+## Mnet Design System
+
+Mnet Design System is a reusable component library that helps our developers to build UIs faster.
+The goal is to make building durable UIs more productive and satisfying.
+
+## Install
+
+Add mnet-design-system to your project.
+
+`yarn add mnet-design-system --dev`
+
+### **Use**
+
+Import components you want into your UI
+
+`import { Button, Badge } from ‘mnet-design-system’;`
+
+and use them like so
+
+```
+  const example = () => (
+    <>
+      <Button appearance="primary" onClick={() => 0}>Do something</Button>
+      <Badge onClick={this.clear}>Cool</Badge>
+    </>
+  )
+```
+
+### **Resources**
+
+- [GitHub repository](https://github.com/amitmishrg/mnet-design-system)

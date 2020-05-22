@@ -2,9 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { action } from '@storybook/addon-actions';
 
-import { Icon } from './Icon';
 import { Link } from './Link';
-import { StoryLinkWrapper } from './StoryLinkWrapper';
+import { StoryLinkWrapper } from '../StoryLinkWrapper';
 
 const CustomLink = styled(Link)`
   && {
@@ -35,13 +34,14 @@ export const all = () => (
       nochrome
     </Link>
     <br />
-    <Link href="https://learnstorybook.com">
-      <Icon icon="discord" aria-hidden />
-      With icon in front
-    </Link>
+    <Link href="https://learnstorybook.com">'🎮' With icon in front</Link>
     <br />
-    <Link containsIcon href="https://learnstorybook.com" aria-label="Toggle side bar">
-      <Icon icon="sidebar" aria-hidden />
+    <Link
+      containsIcon
+      href="https://learnstorybook.com"
+      aria-label="Toggle side bar"
+    >
+      🍔
     </Link>
     <br />
     <Link containsIcon withArrow href="https://learnstorybook.com">
@@ -60,11 +60,19 @@ export const all = () => (
       is actually a button
     </Link>
     <br />
-    <Link tertiary LinkWrapper={StoryLinkWrapper} href="http://storybook.js.org">
+    <Link
+      tertiary
+      LinkWrapper={StoryLinkWrapper}
+      href="http://storybook.js.org"
+    >
       has a LinkWrapper like GatsbyLink or NextLink
     </Link>
     <br />
-    <CustomLink tertiary LinkWrapper={StoryLinkWrapper} href="http://storybook.js.org">
+    <CustomLink
+      tertiary
+      LinkWrapper={StoryLinkWrapper}
+      href="http://storybook.js.org"
+    >
       has a LinkWrapper like GatsbyLink or NextLink with custom styling
     </CustomLink>
   </div>

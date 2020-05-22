@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import { action } from '@storybook/addon-actions';
 
 import { Button } from './Button';
-import { Icon } from './Icon';
-import { StoryLinkWrapper } from './StoryLinkWrapper';
+import { StoryLinkWrapper } from '../StoryLinkWrapper';
 
 const CustomButton = styled.button`
   border: 1px solid green;
@@ -67,11 +66,10 @@ export const allButtons = () => (
       Disabled
     </Button>
     <Button appearance="outline" size="small" containsIcon>
-      <Icon icon="link" aria-label="Link" />
+      🔗
     </Button>
     <Button appearance="outline" size="small">
-      <Icon icon="link" />
-      Link
+      🔗 Link
     </Button>
   </div>
 );
@@ -82,8 +80,6 @@ allButtons.story = {
 
 export const buttonWrapper = () => (
   <div>
-    <ButtonWrapper>Original Button Wrapper</ButtonWrapper>
-    <br />
     <Button ButtonWrapper={ButtonWrapper} appearance="primary">
       Primary
     </Button>
@@ -118,7 +114,12 @@ export const buttonWrapper = () => (
     <Button ButtonWrapper={ButtonWrapper} appearance="outline" isLoading>
       Outline
     </Button>
-    <Button ButtonWrapper={ButtonWrapper} appearance="outline" isLoading loadingText="Custom...">
+    <Button
+      ButtonWrapper={ButtonWrapper}
+      appearance="outline"
+      isLoading
+      loadingText="Custom..."
+    >
       Outline
     </Button>
     <br />
@@ -134,15 +135,24 @@ export const buttonWrapper = () => (
     <Button ButtonWrapper={ButtonWrapper} appearance="outline" size="small">
       Outline
     </Button>
-    <Button ButtonWrapper={ButtonWrapper} appearance="primary" isDisabled size="small">
+    <Button
+      ButtonWrapper={ButtonWrapper}
+      appearance="primary"
+      isDisabled
+      size="small"
+    >
       Disabled
     </Button>
-    <Button ButtonWrapper={ButtonWrapper} appearance="outline" size="small" containsIcon>
-      <Icon icon="link" aria-label="Link" />
+    <Button
+      ButtonWrapper={ButtonWrapper}
+      appearance="outline"
+      size="small"
+      containsIcon
+    >
+      🔗
     </Button>
     <Button ButtonWrapper={ButtonWrapper} appearance="outline" size="small">
-      <Icon icon="link" />
-      Link
+      🔗 Link
     </Button>
   </div>
 );
@@ -153,18 +163,32 @@ buttonWrapper.story = {
 
 export const anchorWrapper = () => (
   <div>
-    <StoryLinkWrapper to="http://storybook.js.org">Original Link Wrapper</StoryLinkWrapper>
-    <br />
-    <Button ButtonWrapper={StoryLinkWrapper} appearance="primary" href="http://storybook.js.org">
+    <Button
+      ButtonWrapper={StoryLinkWrapper}
+      appearance="primary"
+      href="http://storybook.js.org"
+    >
       Primary
     </Button>
-    <Button ButtonWrapper={StoryLinkWrapper} appearance="secondary" href="http://storybook.js.org">
+    <Button
+      ButtonWrapper={StoryLinkWrapper}
+      appearance="secondary"
+      href="http://storybook.js.org"
+    >
       Secondary
     </Button>
-    <Button ButtonWrapper={StoryLinkWrapper} appearance="tertiary" href="http://storybook.js.org">
+    <Button
+      ButtonWrapper={StoryLinkWrapper}
+      appearance="tertiary"
+      href="http://storybook.js.org"
+    >
       Tertiary
     </Button>
-    <Button ButtonWrapper={StoryLinkWrapper} appearance="outline" href="http://storybook.js.org">
+    <Button
+      ButtonWrapper={StoryLinkWrapper}
+      appearance="outline"
+      href="http://storybook.js.org"
+    >
       Outline
     </Button>
     <Button
@@ -280,7 +304,7 @@ export const anchorWrapper = () => (
       containsIcon
       href="http://storybook.js.org"
     >
-      <Icon icon="link" aria-label="Link" />
+      🔗
     </Button>
     <Button
       ButtonWrapper={StoryLinkWrapper}
@@ -288,8 +312,7 @@ export const anchorWrapper = () => (
       size="small"
       href="http://storybook.js.org"
     >
-      <Icon icon="link" />
-      Link
+      🔗 Link
     </Button>
   </div>
 );
