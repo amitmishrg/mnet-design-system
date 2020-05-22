@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { darken, rgba } from 'polished';
-import { color, typography } from '../../shared-styles/styles';
-import { easing } from '../../shared-styles/animation';
+import { color, typography } from '../shared-styles/styles';
+import { easing } from '../shared-styles/animation';
 
 export const Text = styled.span`
   display: inline-block;

@@ -1,25 +1,32 @@
 {
   "name": "mnet-design-system",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "polished": "^3.6.3",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "styled-components": "^5.1.0"
-  },
+  "version": "0.0.1",
+  "private": false,
+  "description": "Mnet Design System is a reusable component library that helps our developers to build UIs faster. The goal is to make building durable UIs more productive and satisfying.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "repository": "https://github.com/amitmishrg/mnet-design-system.git",
+  "author": "amitmishra009v@gmail.com",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "build": "rm -rf dist && cross-env BABEL_ENV=production babel src -d dist",
+    "build-docs": "build-storybook --docs",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
+  },
+  "dependencies": {
+    "polished": "^3.6.3",
+    "prop-types": "^15.7.2",
+    "styled-components": "^5.1.0"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,6 +44,8 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/preset-react": "^7.9.4",
     "@storybook/addon-a11y": "^5.3.18",
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-docs": "^5.3.18",
@@ -46,6 +55,10 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-create-react-app": "^3.0.0",
     "@storybook/react": "^5.3.18",
-    "prettier": "^2.0.5"
+    "cross-env": "^7.0.2",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
   }
 }

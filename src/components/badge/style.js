@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { background, color, typography } from '../../shared-styles/styles';
+import { background, color, typography } from '../shared-styles/styles';
 
 export const BadgeWrapper = styled.div`
   display: inline-block;

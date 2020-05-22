@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { darken } from 'polished';
 
-import { color } from '../../shared-styles/styles';
+import { color } from '../shared-styles/styles';
 
 export const linkStyles = css`
   display: inline-block;
